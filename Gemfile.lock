@@ -19,6 +19,8 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    childprocess (5.1.0)
+      logger (~> 1.5)
     coderay (1.1.3)
     concurrent-ruby (1.3.5)
     database_cleaner-core (2.0.1)
@@ -286,6 +288,8 @@ GEM
       rspec-support (~> 3.13.0)
     rspec-support (3.13.6)
     ruby2_keywords (0.0.5)
+    safe_ruby (1.0.5)
+      childprocess (~> 5)
     sequel (5.96.0)
       bigdecimal
     shellany (0.0.1)
@@ -338,6 +342,7 @@ DEPENDENCIES
   puma
   rack-test
   rake
+  safe_ruby
   sqlite3
 
 BUNDLED WITH
