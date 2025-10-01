@@ -1,31 +1,32 @@
 <%# app/templates/web/home/index.html.erb %>
-<h1>Safe Command Runner 👨‍💻</h1>
+<h1>Teach Anya Math 👨‍💻</h1>
 <p>
-  Enter a directory path to list its contents using the <code>ls -la</code> command.
-  For example: <code>.</code> or <code>config</code>
+  Enter a basic math expression and teach Anya some Math!
+  For example: <code>5 * 8</code> or <code>(100 + 20) / 2</code>
 </p>
 
 <form action="/" method="POST" style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px;">
   <div>
-    <label for="user_input">Directory Path:</label>
+    <label for="user_input">Expression:</label>
     <input
       type="text"
       id="user_input"
       name="user_input"
       value="<%= user_input %>"
       style="width: 100%; font-family: monospace;"
+      placeholder="e.g., 2 + 2"
     >
   </div>
 
-  <button type="submit">Run Command</button>
+  <button type="submit">Calculate</button>
 
   <div>
-    <label for="output">Output:</label>
+    <label for="output">Result:</label>
     <textarea
       id="output"
       readonly
-      rows="15"
-      style="width: 100%; background: #f4f4f4; font-family: monospace;"
+      rows="5"
+      style="width: 100%; background: #f4f4f4; font-family: monospace; font-size: 1.5rem;"
     ><%= output %></textarea>
   </div>
 </form>

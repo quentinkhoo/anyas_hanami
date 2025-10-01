@@ -12,11 +12,9 @@ module AnyasHanami
 
           if request.post?
             user_input = request.params[:user_input].to_s.strip
-
             output = Utils::SafeCommand.process(user_input)
           end
 
-          # 5. Render the view, passing the input and output
           response.render(view, user_input: user_input, output: output)
         end
       end
