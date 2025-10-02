@@ -230,6 +230,13 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     ostruct (0.6.3)
+    pg (1.6.2)
+    pg (1.6.2-aarch64-linux)
+    pg (1.6.2-aarch64-linux-musl)
+    pg (1.6.2-arm64-darwin)
+    pg (1.6.2-x86_64-darwin)
+    pg (1.6.2-x86_64-linux)
+    pg (1.6.2-x86_64-linux-musl)
     pry (0.15.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -339,6 +346,7 @@ DEPENDENCIES
   hanami-validations (~> 2.2)
   hanami-view (~> 2.2)
   hanami-webconsole (~> 2.2)
+  pg
   puma
   rack-test
   rake

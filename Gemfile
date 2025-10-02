@@ -15,6 +15,7 @@ gem "dry-operation"
 gem "puma"
 gem "rake"
 gem "sqlite3"
+gem "pg"
 gem "safe_ruby"
 
 group :development do
