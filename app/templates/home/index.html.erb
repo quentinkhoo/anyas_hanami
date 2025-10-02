@@ -1,32 +1,38 @@
 <%# app/templates/web/home/index.html.erb %>
-<h1>Teach Anya Math 👨‍💻</h1>
-<p>
-  Enter a basic math expression and teach Anya some Math!
-  For example: <code>5 * 8</code> or <code>(100 + 20) / 2</code>
-</p>
 
-<form action="/" method="POST" style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px;">
-  <div>
-    <label for="user_input">Expression:</label>
-    <input
-      type="text"
-      id="user_input"
-      name="user_input"
-      value="<%= user_input %>"
-      style="width: 100%; font-family: monospace;"
-      placeholder="e.g., 2 + 2"
-    >
+<div class="container">
+  <div class="anya-study-image">
+    <img src="<%= assets['anya1.jpg'].url %>" alt="Anya Forger studying with great effort">
   </div>
 
-  <button type="submit">Calculate</button>
+  <h1>Anya's Math Mission</h1>
+  <p>
+    Anya needs to get Stella Stars! Help her by solving a math problem. <br>
+    For example: <code>5 * 8</code> or <code>(100 + 20) / 2</code>
+  </p>
 
-  <div>
-    <label for="output">Result:</label>
-    <textarea
-      id="output"
-      readonly
-      rows="5"
-      style="width: 100%; background: #f4f4f4; font-family: monospace; font-size: 1.5rem;"
-    ><%= output %></textarea>
-  </div>
-</form>
+  <form action="/" method="POST">
+    <div>
+      <label for="user_input">Anya's Problem:</label>
+      <input
+        type="text"
+        id="user_input"
+        name="user_input"
+        value="<%= user_input %>"
+        placeholder="e.g., 2 + 2"
+        autofocus
+      >
+    </div>
+
+    <button type="submit">Help Anya Calculate!</button>
+
+    <div>
+      <label for="output">The Answer Is...</label>
+      <textarea
+        id="output"
+        readonly
+        rows="3"
+      ><%= output %></textarea>
+    </div>
+  </form>
+</div>

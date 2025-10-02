@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-require "safe_ruby"
 require "utils/safe_command"
 
 module AnyasHanami

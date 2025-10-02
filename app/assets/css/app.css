@@ -1,5 +1,168 @@
+/* app/assets/css/app.css */
+
+/* --- Root Variables: Anya's Color Palette --- */
+:root {
+  --anya-pink: #f8c8dc;        /* Anya's hair */
+  --eden-black: #3a3a3a;        /* Uniform color */
+  --eden-gold: #f5b942;         /* Uniform trim / Stella Stars */
+  --background-cream: #fdf6e9;  /* A soft, warm background */
+  --text-color: #4a4a4a;        /* Dark gray for readability */
+  --border-color: #e0e0e0;
+  --success-green: #68b493;     /* A nice, soft green for success */
+}
+
+/* --- General Body Styles --- */
 body {
+  background-color: var(--background-cream);
+  color: var(--text-color);
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top */
+  min-height: 100vh;
+
+  /* Subtle peanut background pattern! */
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e6dac8' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* --- Main Container --- */
+.container {
+  max-width: 600px;
+  width: 100%;
   background-color: #fff;
-  color: #000;
-  font-family: sans-serif;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid var(--anya-pink);
+  text-align: center;
+}
+
+
+/* --- Typography --- */
+h1 {
+  color: var(--eden-black);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Add a star next to the title like a Stella Star! */
+h1::after {
+  content: '★';
+  color: var(--eden-gold);
+  margin-left: 10px;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+code {
+  background-color: #f3e5f5; /* Light purple */
+  color: #7b1fa2;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* --- Form Styles --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.2rem;
+  box-sizing: border-box; /* Important for consistent sizing */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--anya-pink);
+  box-shadow: 0 0 0 3px rgba(248, 200, 220, 0.5);
+}
+
+button[type="submit"] {
+  background-color: var(--eden-gold);
+  color: var(--eden-black);
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 0px #c4912f; /* Creates a 3D effect */
+}
+
+button[type="submit"]:hover {
+  background-color: #ffca5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0px #c4912f;
+}
+
+button[type="submit"]:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0px #c4912f;
+}
+
+/* --- Output Textarea --- */
+#output {
+  background: #f4f4f4;
+  color: var(--eden-black);
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-height: 100px;
+  border-color: var(--success-green);
+}
+
+/* New styles for Anya's image */
+.anya-study-image {
+  margin-bottom: 2rem; /* Space below the image */
+  text-align: center; /* Center the image if it's smaller than its container */
+}
+
+.anya-study-image img {
+  max-width: 180px; /* Adjust size as needed, keep it cute and not overwhelming */
+  height: auto;
+  border-radius: 50%; /* Make it circular for extra cuteness, or a smaller border-radius for a soft square */
+  border: 4px solid var(--anya-pink); /* A pink border */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.anya-study-image img:hover {
+  transform: scale(1.05) rotate(2deg); /* Anya winks/twitches when you hover! */
+}
+
+/* Update h1 margin to adjust for the image being above it */
+h1 {
+  color: var(--eden-black);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-top: 0; /* Already 0, but good to ensure */
+  margin-bottom: 0.5rem; /* Space below the title */
 }
