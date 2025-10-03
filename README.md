@@ -5,16 +5,19 @@
 ## 1. Mission Briefing
 Welcome, agent. Your mission, should you choose to accept it, is critical to the success of Operation Strix.
 
-Anya Forger's academic performance at Eden Academy is... inconsistent. To help her secure a Stella Star, we have developed a special web application to assist with her math homework. However, to save time, we've built in a "shortcut."
+Anya Forger's academic performance at Eden Academy is... inconsistent. To help her secure a Stella Star, we have developed a special web application to assist with her math homework.
 
-Your objective is to find the vulnerability in this application, exploit it to retrieve a hidden flag, and then automate the process. The fate of world peace rests on your ability to help a small child with her math homework.
+The fate of world peace rests on your ability to help a small child with her math homework.
+
+(OOC):
+Your REAL objective is to find the vulnerability in this application, exploit it to retrieve a hidden flag, and then automate the process.
 
 ## 2. Prerequisites
 Before you begin, ensure your system is equipped with the following tools:
 
 Docker: To build and manage the application container.
 
-A local Kubernetes cluster: We recommend kind or minikube.
+A local Kubernetes cluster: We recommend `kind` or `minikube`.
 
 A scripting language of your choice (e.g., Python, Bash, Go) for the final task.
 
