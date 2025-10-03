@@ -56,7 +56,7 @@ The Flag: The value you retrieved from the application.
 
 Your Exploit Script: The automated script from Phase 4.
 
-A Brief Write-Up: A short report (REPORT.md) that includes:
+A Brief Write-Up: A short report that includes:
 
 A clear explanation of the vulnerability you discovered.
 
