@@ -32,13 +32,13 @@ Use the provided manifest to deploy the application and its database to your loc
 
 The manifest is located at kubernetes/deployment.yaml.
 
-[!TIP]
+> [!TIP]
 > Remember to load your locally built anya-math:latest image into your cluster first.
 
 ### Phase 3: Exploit the Vulnerability
 The application is flawed. Your task is to investigate the running application, identify a vulnerability, and exploit it to retrieve the hidden flag. The flag is stored as a Kubernetes secret. The flag has the format like `ascenda{this_is_a_flag}`.
 
-[!NOTE]
+> [!NOTE]
 > You have to exploit the web application, to retrieve the flag. Directly entering the container does not count!
 
 ### Phase 4: Automate the Mission
