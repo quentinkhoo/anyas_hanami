@@ -46,15 +46,15 @@ RUN apk add --no-cache \
     postgresql-client \
     tzdata
 
-# 2. Create a non-root user for security
-RUN addgroup -S anya && adduser -S anya -G anya
-
-# 3. Set up the application environment
+# 2. Set up the application environment
 WORKDIR /app
 ENV HANAMI_ENV=production
 ENV PORT=2300
 ENV BUNDLE_PATH="/usr/local/bundle"
 ENV BUNDLE_WITHOUT="development:test"
+
+# 3. Create a non-root user for security
+RUN addgroup -S anya --gid 6969 && adduser -S -u 6969 anya -G anya -h /app
 
 # 4. Copy installed gems and application code from the builder stage
 COPY --from=builder ${BUNDLE_PATH} ${BUNDLE_PATH}

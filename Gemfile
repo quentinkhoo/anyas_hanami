@@ -17,6 +17,7 @@ gem "rake"
 gem "sqlite3"
 gem "pg"
 gem "safe_ruby"
+gem "dotenv"
 
 group :development do
   gem "hanami-webconsole", "~> 2.2"
