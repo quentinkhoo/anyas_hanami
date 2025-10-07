@@ -68,3 +68,6 @@ A step-by-step description of how your exploit works.
 Clear instructions on how to run your script.
 
 Good luck, agent. The success of this operation depends on you.
+
+## 5. Disclaimer
+Yes I did engage the help of an AI for this.
