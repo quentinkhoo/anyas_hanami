@@ -13,13 +13,7 @@ The fate of world peace rests on your ability to help a small child with her mat
 Your REAL objective is to find the vulnerability in this application, exploit it to retrieve a hidden flag, and then automate the process.
 
 ## 2. Prerequisites
-Before you begin, ensure your system is equipped with the following tools:
-
-Docker: To build and manage the application container.
-
-A local Kubernetes cluster: We recommend `kind` or `minikube`.
-
-A scripting language of your choice (e.g., Python, Bash, Go) for the final task.
+Before you begin, ensure your system is equipped with `docker` and a Kubernetes cluster. `kind` or `minikube` is recommended.
 
 ## 3. Your Objectives
 Your mission is divided into four distinct phases. Complete them in order.
@@ -41,7 +35,7 @@ If you did this correctly, you should be able to see the application like this:
 ![alt text](<anya_success.png>)
 
 > [!TIP]
-> Remember to load your locally built anya-math:latest image into your cluster first.
+> Remember to load your locally built anya-math:latest image into your cluster first!
 
 ### Phase 3: Exploit the Vulnerability
 The application is flawed. Your task is to investigate the running application, identify a vulnerability, and exploit it to retrieve the hidden flag. The flag is stored as a Kubernetes secret. The flag has the format like `ascenda{this_is_a_flag}`.
